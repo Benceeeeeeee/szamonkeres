@@ -12,3 +12,13 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Book{
+  id Int @id @default(autoincrement())
+  author String
+  title String
+  year Int
+  genre String
+  pages Int
+  available Boolean
+}
